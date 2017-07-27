@@ -110,7 +110,7 @@ dic["applicant.applicationMessage"] = "Joe doe was here."
 dic["retypeemail_visible"] = "1"
 dic["applicant.retypeEmail"] = "jon.doe@mail.com"
 
-dic.update({'resume': ('rancher_both.docx', open('resume.docx', 'rb'), 'application/vnd.openxmlformats-officedocument.wordprocessingml.document')})
+dic.update({'resume': ('resume.docx', open('resume.docx', 'rb'), 'application/vnd.openxmlformats-officedocument.wordprocessingml.document')})
 
 datas = MultipartEncoder(dic)
 httpReq = requests.post("https://apply.indeed.com/indeedapply/applyv2?hl=en_US", data=datas, headers={"Content-Type": datas.content_type})
